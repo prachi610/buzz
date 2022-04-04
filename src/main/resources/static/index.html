@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>chatRoom</title>
+		<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+		<script src="/webjars/jquery/jquery.min.js"></script>
+		<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+		<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<style>
+		 
+	</style>
+	<body>
+		<div id="name-form" class="bg-primary d-flex align-items-center">
+			<div class="wlcm-msg">
+				<h1>Welcome to the Chatroom</h1>
+				<h4>Enter your name below to join the Chat...</h4>
+			</div>
+			<div class="input-group">
+				<input type="text" placeholder="Enter your name...." id="name-value" autofocus class="form-control">
+				
+				<div class="input-group-append">
+					<button class="button join-btn" id="login">Enter</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="chat-room" class="d-none">
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="parent-card">
+					<div class="header-cont">
+						<h1 id="head-chat"></h1>
+						<button class="button" id="logout">LOGOUT</button>
+					</div>
+						<div class="input-group">
+							<input type="text" placeholder="Enter Message..." id="message-value">
+							
+							<div class="input-group-append">
+								<button class="button" id="send-btn">SEND</button>
+							</div>
+						</div>
+						<div class="card-body" >
+						<div id="chat-hint">!Chat Here</div>
+							<table class="table" id="msg-container">
+									
+							</table>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	
+	<script src="script.js"></script>
+</html>
